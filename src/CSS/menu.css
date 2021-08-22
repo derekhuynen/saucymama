@@ -1,0 +1,63 @@
+.menuContainer{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    border: 1px black solid;
+}
+
+.section{
+    flex: 1;
+    border: 1px black solid;
+    margin: 20px
+}
+
+.sectionHeader{
+    border: 1px black solid;
+    width: 100%;
+    min-height: 50px;
+    padding: 5px
+}
+
+.sectionHeader > h1{
+   font-size: 18px;
+}
+
+.sectionHeader > h3{
+    font-size: 14px;
+
+}
+.foodDiv{
+ display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.foodItem{
+    flex: 1 1 50%;
+    max-width: 50%;
+    padding: 5px;
+    border: 1px red solid;
+}
+
+.foodItemTop{
+    border: 1px black solid;
+    display: flex;
+    width: 100%;
+}
+
+.foodItemTop > h3 {
+    font-size: 14px;
+}
+
+
+.foodName{
+    display: inline;
+}
+
+.foodPrice{
+    justify-content: right;
+}
+
+.foodItem > h3{
+    font-size: 14px;
+}
