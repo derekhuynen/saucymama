@@ -36,11 +36,9 @@
     flex: 1 1 50%;
     max-width: 50%;
     padding: 5px;
-    border: 1px red solid;
 }
 
 .foodItemTop{
-    border: 1px black solid;
     display: flex;
     width: 100%;
 }
