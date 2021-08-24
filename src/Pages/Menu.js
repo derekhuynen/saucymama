@@ -33,6 +33,11 @@ const display = Object.entries(menu).map((entry, index) => {
         return (
             <div className={"menuContainer"}>
                 {display}
+
+
+
+
+
             </div>
 
         )
