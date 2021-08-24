@@ -30,10 +30,23 @@ const display = Object.entries(menu).map((entry, index) => {
 
     export default function Menu() {
 
+        function a(i){ console.log({i}); }
+
+
+
+        function looper() {
+            for (let i = 0; i < 10; i++) {
+                console.log("hello")
+                setTimeout(a(i),3000)
+            }
+        }
+
+
         return (
             <div className={"menuContainer"}>
-                {display}
 
+
+                {looper()}
 
 
 
