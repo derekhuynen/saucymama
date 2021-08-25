@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Menu from './Pages/Menu'
 import Home from './Pages/Home'
 import Header from './Components/Header/Header'
+import Footer from "./Components/Footer/Footer";
 
 function App() {
     return (
@@ -14,7 +15,7 @@ function App() {
                     <Route path="/menu" component={Menu}/>
                     <Route path="/" component={Home}/>
                 </Switch>
-
+                <Footer/>
             </ Router>
         </div>
     );
