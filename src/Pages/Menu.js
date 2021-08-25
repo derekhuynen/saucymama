@@ -46,7 +46,7 @@ const display = Object.entries(menu).map((entry, index) => {
             <div className={"menuContainer"}>
 
 
-                {looper()}
+
 
 
 
