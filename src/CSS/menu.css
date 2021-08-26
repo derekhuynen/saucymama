@@ -1,8 +1,38 @@
 .menuContainer{
-
-    display: flex;
-    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
     border: 1px black solid;
+
+}
+
+.sortingBox{
+    display: flex;
+    flex-direction: row;
+    margin: auto auto;
+    height: 500px;
+    background-color: black;
+    width: 500px;
+}
+
+
+.bar{
+    width: 20px;
+    background-color: white;
+    border: 1px black solid;
+    position: relative;
+}
+
+.bar > h4{
+    position: absolute;
+    bottom: -5px;
+    left: 2px;
+    color: black;
+    font-size: 14px;
+}
+
+.buttonSwap{
+    height: 30px;
+
 }
 
 .section{

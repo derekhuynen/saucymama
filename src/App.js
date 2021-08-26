@@ -15,7 +15,7 @@ function App() {
                     <Route path="/menu" component={Menu}/>
                     <Route path="/" component={Home}/>
                 </Switch>
-                <Footer/>
+
             </ Router>
         </div>
     );

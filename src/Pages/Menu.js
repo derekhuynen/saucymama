@@ -1,58 +1,93 @@
-import React from "react";
-import {menu} from '../JSON/menu'
+import React, {useEffect, useState} from "react";
 import '../CSS/menu.css'
+import bblSort from '../Algos/Bubble'
+import Selection from '../Algos/Selection'
 
+const randomArray = (size) => {
+    return shuffleArray(Array.from(Array(size + 1).keys()).slice(1))
+}
 
-const display = Object.entries(menu).map((entry, index) => {
-    return(
-        <div key={entry[1].name} className={"section"}>
-            <div className={"sectionHeader"}>
-                <h1>{entry[1].name}</h1>
-                <h3>{entry[1].description}</h3>
-            </div>
-            <div className={"foodDiv"}>
-            {entry[1].items.map((item,index)=> {
-                return(
-                    <div key={item.item} className={"foodItem"}>
-                        <div className={"foodItemTop"}>
-                            <h3 className={"foodName"}>{item.item}</h3>
-                            <h3 className={"foodPrice"}>{item.price}</h3>
-                        </div>
-                        <h3>{item.description}</h3>
-                    </div>
-                )
-            })}
-        </div>
-        </div>
-    )
-});
-
-
-    export default function Menu() {
-
-        function a(i){ console.log({i}); }
-
-
-
-        function looper() {
-            for (let i = 0; i < 10; i++) {
-                console.log("hello")
-                setTimeout(a(i),3000)
-            }
-        }
-
-
-        return (
-            <div className={"menuContainer"}>
-
-
-
-
-
-
-
-            </div>
-
-        )
-
+const shuffleArray = array => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
+    return array;
+}
+
+
+export default function Menu() {
+
+    const arrLength = 25;
+    const [arr, setArr] = useState({arr: randomArray(arrLength), front: 0, middle: 0, end: 0});
+
+
+    useEffect(() => {
+        console.log("UseEffect")
+
+    }, []);
+
+
+    const displayBox = (number) => {
+        const newHeight = number * 20;
+
+        if (number === arr.end) {
+            return (
+                <div className={"bar"}
+                     style={{height: newHeight, marginTop: 500 - newHeight, backgroundColor: 'orange'}}>
+                    <h4>{number}</h4>
+                </div>
+            )
+        } else if (number === arr.middle) {
+            return (
+                <div className={"bar"}
+                     style={{height: newHeight, marginTop: 500 - newHeight, backgroundColor: 'yellow'}}>
+                    <h4>{number}</h4>
+                </div>
+            )
+        } else if (number === arr.front) {
+            return (
+                <div className={"bar"}
+                     style={{height: newHeight, marginTop: 500 - newHeight, backgroundColor: 'green'}}>
+                    <h4>{number}</h4>
+                </div>
+            )
+        } else {
+            return (
+                <div className={"bar"} style={{height: newHeight, marginTop: 500 - newHeight}}>
+                    <h4>{number}</h4>
+                </div>
+            )
+        }
+    }
+
+    return (
+        <div className={"menuContainer"}>
+            <div className={"sortingBox"}>
+                {arr.arr.map((num) => {
+                    return displayBox(num)
+                })}
+            </div>
+            <button onClick={() => {
+                setArr(prevState => ({
+                    ...prevState,
+                    arr: randomArray(arrLength),
+                    front: 0,
+                    middle: 0,
+                    end: 0
+                }));
+                bblSort(arr.arr, setArr)
+            }}>Bubble
+            </button>
+            <button onClick={() => {
+                setArr({arr: [...randomArray(25)], front: 0,middle:0,  end: 0})
+                Selection(arr.arr, setArr);
+            }}>Selection
+            </button>
+        </div>
+
+    )
+}
+
