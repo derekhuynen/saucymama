@@ -37,7 +37,7 @@ export default function Header(){
                         <h4>(909) 878-0165</h4>
                     </div>
                     <div className={"hamburger"}>
-                        <Icon onClick={()=> setExpand(!expand)} icon={hamburgerMenu} color="white" width="30" height="30"/>
+                        <Icon onClick={()=> setExpand(false)} icon={hamburgerMenu} color="white" width="30" height="30"/>
                     </div>
                 </div>
             </div>

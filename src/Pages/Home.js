@@ -2,11 +2,15 @@ import React from "react";
 import Logo from '../Images/SaucyMamaLogo300.png'
 import '../CSS/style.css'
 import Button from 'react-bootstrap/Button'
+import {useHistory} from "react-router-dom";
+
 
 
 export default function Home() {
+    const history = useHistory();
+
     return (
-        <div className={"homeContainer"}>
+        <div className={"homeContainer"} >
             <div className={"homeBGImage"}>
 
 
@@ -21,7 +25,7 @@ export default function Home() {
 
                     <div className={"homeBottomContainer"}>
                         <div className={"center"}>
-                            <div className={"box"}>
+                            <div className={"box1"}>
                                 <div className={"boxTop"}>
                                     <h4>(909) 878-0165</h4>
                                     <h4>618 B Pine Knot Ave</h4>
@@ -31,7 +35,7 @@ export default function Home() {
 
                             <div className={"box"}>
                                 <div className={"boxTop"}>
-                                    <h4>Hours</h4>
+                                    <h3>Hours</h3>
                                     <h4>Mon-Tues: 11:00 AM - 8:00 PM</h4>
                                     <h4>Wed-Sun:  11:00 AM - 9:00 PM</h4>
                                 </div>
@@ -40,7 +44,7 @@ export default function Home() {
                     </div>
 
                     <div className={"homeButton"}>
-                        <Button className={"button"}>View Menu</Button>
+                        <Button className={"button"} onClick={() => history.push('/menu')}>View Menu</Button>
                     </div>
 
                 </div>

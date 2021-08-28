@@ -8,7 +8,6 @@ import Footer from "./Components/Footer/Footer";
 function App() {
     return (
         <div className="app">
-
             <Router>
                 <Header/>
                 <Switch>
