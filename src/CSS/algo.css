@@ -1,0 +1,91 @@
+.menuContainer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 1px black solid;
+
+}
+
+.sortingBox{
+    display: flex;
+    flex-direction: row;
+    margin: auto auto;
+    height: 500px;
+    background-color: black;
+    width: 500px;
+}
+
+
+.bar{
+    width: 20px;
+    background-color: white;
+    border: 1px black solid;
+    position: relative;
+}
+
+.bar > h4{
+    position: absolute;
+    bottom: -5px;
+    left: 2px;
+    color: black;
+    font-size: 14px;
+}
+
+.buttonSwap{
+    height: 30px;
+
+}
+
+.section{
+    flex: 1;
+    border: 1px black solid;
+    margin: 20px
+}
+
+.sectionHeader{
+    border: 1px black solid;
+    width: 100%;
+    min-height: 50px;
+    padding: 5px
+}
+
+.sectionHeader > h1{
+   font-size: 18px;
+}
+
+.sectionHeader > h3{
+    font-size: 14px;
+
+}
+.foodDiv{
+ display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.foodItem{
+    flex: 1 1 50%;
+    max-width: 50%;
+    padding: 5px;
+}
+
+.foodItemTop{
+    display: flex;
+    width: 100%;
+}
+
+.foodItemTop > h3 {
+    font-size: 14px;
+}
+
+
+.foodName{
+    display: inline;
+}
+
+.foodPrice{
+    justify-content: right;
+}
+
+.foodItem > h3{
+    font-size: 14px;
+}
