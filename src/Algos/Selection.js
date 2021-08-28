@@ -8,6 +8,8 @@ function delay(t) {
 
 
 export default async function selectionSort(array, setArr) {
+        console.log("Selection")
+        console.log(array)
 
         let n = array.length;
 

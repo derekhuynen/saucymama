@@ -24,11 +24,6 @@ export default function Menu() {
     const [arr, setArr] = useState({arr: randomArray(arrLength), front: 0, middle: 0, end: 0});
 
 
-    useEffect(() => {
-        console.log("UseEffect")
-
-    }, []);
-
 
     const displayBox = (number) => {
         const newHeight = number * 20;
@@ -82,7 +77,10 @@ export default function Menu() {
             }}>Bubble
             </button>
             <button onClick={() => {
-                setArr({arr: [...randomArray(25)], front: 0,middle:0,  end: 0})
+
+                const newArray = randomArray(25)
+                console.log(newArray)
+                setArr({arr: [...newArray], front: 0,middle:0,  end: 0})
                 Selection(arr.arr, setArr);
             }}>Selection
             </button>
