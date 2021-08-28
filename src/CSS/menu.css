@@ -2,40 +2,59 @@
     padding-top: 50px;
     padding-bottom: 50px;
     border: 1px black solid;
-    height: 100%;
+    height: 1400px;
 
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
 }
 
 .section-container {
-    border: 1px black solid;
+    border: 3px black solid;
     flex: 0 0;
-    width: 50%;
+    width: calc(50% - 20px);
+    margin: 10px;
+    min-width: calc(680px + 25px);
+}
+
+.section-container > h2 {
+    margin: 5px;
+}
+
+.section-container > p {
+    margin: 5px;
+}
+
+
+
+.bolDescription > h3{
+    display: inline;
+    margin-right: 15px;
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 
 .food-container{
-    justify-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    border: 1px red solid;
 
 }
 
 .food-item{
-    flex: 0 1 ;
-    width: 50%;
+    flex: 1 0 ;
+    width: calc(50% - 10px);
     border: 1px black solid;
-    padding: 0;
-    margin: 0;
-
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    min-width: 340px;
+    max-height:  150px;
 }
 
-.food-item > p{
+.food-item > p {
     font-size: 14px;
     padding: 0;
     margin: 0;
@@ -43,18 +62,15 @@
 
 
 .pricingOne{
-
     display: flex;
-    padding: 0;
-    margin: 0;
 }
 
 .pricingOne > h3{
     flex: 0 0 calc(100% - 38px);
     font-size: 24px;
     width: calc(100% - 25px);
-
     margin-right: 5px;
+    margin-bottom: 0;
     padding: 0;
 }
 
@@ -63,15 +79,10 @@
     position: relative;
     font-size: 16px;
     top: 3px;
-
     padding-bottom: -2px;
 }
 
-
-
-
 .pricing{
-
 }
 
 .pricing > h3{
@@ -85,4 +96,52 @@
     padding: 0;
     margin-top: 2px;
     margin-bottom: 2px;
+}
+
+@media screen and (max-width: 1600px) {
+    .menu-container {
+        flex-wrap: nowrap;
+        height: 100%;
+    }
+
+    .section-container {
+        border: 3px black solid;
+        flex: 0 0;
+        width: calc(100% - 20px);
+        margin: 10px;
+        min-width: 0;
+    }
+
+    .food-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .food-item{
+        flex: 1 0 ;
+        width: calc(50% - 10px) ;
+        border: 1px black solid;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 5px;
+        min-width: 340px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .food-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 100% !important;
+    }
+    .food-item{
+        flex: 0 0 ;
+        width: calc(100% - 10px) ;
+        min-width: 0px;
+    }
+
+
 }

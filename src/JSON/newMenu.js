@@ -3,16 +3,17 @@ export const menu = {
     Appetizers: {
         name: "Appetizers",
         description: "Served with choice of ranch, bleu cheese or pizza sauces.",
+        bolDescription: [],
         items:
             [
                 {
-                item: "Chicken Wings",
-                price: [11.00,15.00],
-                description: "Flamin' hot, BBQ, teriyaki or garlic Parmesan."
-            },
+                    item: "Chicken Wings",
+                    price: [11.00, 15.00],
+                    description: "Flamin' hot, BBQ, teriyaki or garlic Parmesan."
+                },
                 {
                     item: "Mozzarella Sticks",
-                    price: [8.00,12.00],
+                    price: [8.00, 12.00],
                     description: ""
                 },
                 {
@@ -21,9 +22,10 @@ export const menu = {
                     description: ""
                 },
                 {
-                    item: "Garlic Breadsticks",
-                    price: [12.00],
-                    description: ""
+                    item: "Skillet Pizza Fries",
+                    price: [15.00],
+                    description: "Choice of steak fries, waffles fries or tots. Topped with melted mozzarella, pepperoni, bacon bits and jalapenos."
+
                 },
                 {
                     item: "Homemade Meatballs",
@@ -46,9 +48,9 @@ export const menu = {
                     description: ""
                 },
                 {
-                    item: "Skillet Pizza Fries",
-                    price: [15.00],
-                    description: "Choice of steak fries, waffles fries or tots. Topped with melted mozzarella, pepperoni, bacon bits and jalapenos."
+                    item: "Garlic Breadsticks",
+                    price: [12.00],
+                    description: ""
                 },
                 {
                     item: "Garlic Fries",
@@ -75,6 +77,7 @@ export const menu = {
     Pizzas: {
         name: "Pizza",
         description: "",
+        bolDescription: ["SMALL: $16,", "MEDIUM: $20,", "LARGE: $23"],
         items: [
             {
                 item: "Kayla's Combo",
@@ -141,28 +144,29 @@ export const menu = {
     Salads: {
         name: "Salads",
         description: "Ranch, Italian, Bleu Cheese, Raspberry Vinaigrette, Caesar, Oil & Vinegar",
+        bolDescription: [],
         items: [
             {
-                item: "Antipasto Salad",
-                price: [11.00,15.00],
-                description: "Iceberg lettuce topped with salami, pepperoni, canadian bacon, provolone, mozzarella, cherry tomatoes, red onions, olives, pepperoncinis, and Italian dressing."
-            }
-            ,
-            {
                 item: "Caesar Salad",
-                price: [9.00,13.00],
+                price: [9.00, 13.00],
                 description: "Romaine lettuce tossed with shredded parmesan, seasoned croutons, and Caesar dressing."
             },
             {
                 item: "Garden Salad",
-                price: [10.00,14.00],
+                price: [10.00, 14.00],
                 description: "Iceberg lettuce, cherry tomatoes, olives, mozzarella, seasoned croutons, and choice of dressing."
+            },
+            {
+                item: "Antipasto Salad",
+                price: [11.00, 15.00],
+                description: "Iceberg lettuce topped with salami, pepperoni, canadian bacon, provolone, mozzarella, cherry tomatoes, red onions, olives, pepperoncinis, and Italian dressing."
             },
         ],
     },
     Sandwiches: {
         name: "Sandwiches",
         description: "Served with a side of fries or tots, (except meatball) Add Avocado $2.00.",
+        bolDescription: [],
         items: [
             {
                 item: "Meatball Sandwich",
@@ -194,6 +198,7 @@ export const menu = {
     Pasta: {
         name: "Pasta",
         description: "",
+        bolDescription: [],
         items: [
             {
                 item: "Grandma's Spaghetti",
