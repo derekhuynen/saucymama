@@ -1,7 +1,32 @@
 import React, {useEffect, useState} from "react";
 import '../CSS/menu.css'
-import {menu} from '../JSON/menu'
+import {menu} from '../JSON/newMenu'
 
+
+
+const calcPrices = (name,prices) => {
+
+    if(prices.length === 1){
+        return(
+            <div className={"pricingOne"}>
+                <h3>{name}</h3>
+                <h4>${prices[0]}</h4>
+            </div>
+
+
+        )
+    }else if(prices.length === 2){
+        return(
+            <div className={"pricing"}>
+                <h3>{name}</h3>
+                <h4>Small: ${prices[0]}, Large: ${prices[1]}</h4>
+            </div>
+        )
+    }else{
+        return null;
+    }
+
+}
 
 
 
@@ -14,8 +39,7 @@ const sections = (sectionItems,height) => {
                         return (
 
                             <div className={"food-item"}>
-                                <h3>{sectionItem.item}</h3>
-                                <h4>{sectionItem.price}</h4>
+                                {calcPrices(sectionItem.item,sectionItem.price)}
                                 <p>{sectionItem.description}</p>
                             </div>
                         )
@@ -38,9 +62,7 @@ export default function Menu() {
         <div className={"menu-container"}>
 
             {console.log(menu)}
-            {sections(menu["Appetizers"], 650)}
-            {sections(menu["SpecialtiesPizzas"], 400)}
-            {sections(menu["FavesPizzas"], 400)}
+            {sections(menu["Appetizers"], 570)}
 
         </div>
 

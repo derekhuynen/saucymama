@@ -18,27 +18,71 @@
 
 
 .food-container{
+    justify-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     border: 1px red solid;
+
 }
 
 .food-item{
-    flex: 0 1 50px;
+    flex: 0 1 ;
     width: 50%;
     border: 1px black solid;
+    padding: 0;
+    margin: 0;
 
 }
 
-.food-item > h3{
-    font-size: 20px;
-}
-
-.food-item > h4{
-    font-size: 16px;
-}
 .food-item > p{
     font-size: 14px;
     padding: 0;
+    margin: 0;
+}
+
+
+.pricingOne{
+
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.pricingOne > h3{
+    flex: 0 0 calc(100% - 38px);
+    font-size: 24px;
+    width: calc(100% - 25px);
+
+    margin-right: 5px;
+    padding: 0;
+}
+
+.pricingOne > h4{
+    flex: 0 0 33px;
+    position: relative;
+    font-size: 16px;
+    top: 3px;
+
+    padding-bottom: -2px;
+}
+
+
+
+
+.pricing{
+
+}
+
+.pricing > h3{
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing > h4{
+    font-size: 16px;
+    padding: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
